@@ -1,0 +1,12 @@
+{{define "title"}}Patient Detail{{end}}
+{{define "content"}}
+<h1>Patient Detail</h1>
+<p>First Name: {{.FirstName}}</p>
+<p>Last Name: {{.LastName}}</p>
+<p>Date of Birth: {{.DOB}}</p>
+<p>Address: {{.Address}}</p>
+<p>Phone: {{.Phone}}</p>
+<a href="/patients/edit/{{.ID}}">Edit</a>
+<a href="/patients/delete/{{.ID}}">Delete</a>
+<a href="/patients">Back to Patients</a>
+{{end}}

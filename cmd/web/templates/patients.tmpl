@@ -1,0 +1,31 @@
+{{define "title"}}Patients{{end}}
+{{define "content"}}
+<h1>Patients</h1>
+<a href="/patients/add">Add Patient</a>
+<table>
+	<tr>
+		<th>ID</th>
+		<th>First Name</th>
+		<th>Last Name</th>
+		<th>Date of Birth</th>
+		<th>Address</th>
+		<th>Phone</th>
+		<th>Actions</th>
+	</tr>
+	{{range .}}
+	<tr>
+		<td>{{.ID}}</td>
+		<td>{{.FirstName}}</td>
+		<td>{{.LastName}}</td>
+		<td>{{.DOB}}</td>
+		<td>{{.Address}}</td>
+		<td>{{.Phone}}</td>
+		<td>
+			<a href="/patients/view/{{.ID}}">View</a>
+			<a href="/patients/edit/{{.ID}}">Edit</a>
+			<a href="/patients/delete/{{.ID}}">Delete</a>
+		</td>
+	</tr>
+	{{end}}
+</table>
+{{end}}
